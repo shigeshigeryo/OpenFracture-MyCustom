@@ -63,7 +63,7 @@ public class Slice : MonoBehaviour
             // Fire the completion callback
             if (callbackOptions.onCompleted != null)
             {
-                callbackOptions.onCompleted.Invoke();
+                callbackOptions.CallOnCompleted(this.fragmentRoot);
             }
         }
     }

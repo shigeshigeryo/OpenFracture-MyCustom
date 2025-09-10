@@ -10,7 +10,7 @@ public class UnfreezeFragment : MonoBehaviour
     public bool unfreezeAll = true;
 
     [Tooltip("This callback is invoked when the fracturing process has been completed.")]
-    public UnityEvent onFractureCompleted;
+    public UnityEvent<GameObject> onFractureCompleted;
 
     // True if this fragment has already been unfrozen
     private bool isFrozen = true;
@@ -71,7 +71,7 @@ public class UnfreezeFragment : MonoBehaviour
 
         if (this.onFractureCompleted != null)
         {
-            this.onFractureCompleted.Invoke();
+            this.onFractureCompleted.Invoke(null);
         }
     }
 
