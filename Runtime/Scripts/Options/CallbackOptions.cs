@@ -9,12 +9,17 @@ public class CallbackOptions
     public UnityEvent<Collider, GameObject, Vector3> onFracture;
 
     [Tooltip("This callback is invoked when the fracturing/slicing process has been completed.")]
-    public UnityEvent onCompleted;
+    public UnityEvent<GameObject> onCompleted;
 
 
     public CallbackOptions()
     {
         this.onCompleted = null;
+    }
+
+    public void CallOnCompleted(GameObject fragmentRoot)
+    {
+        onCompleted?.Invoke(fragmentRoot);
     }
 
     public void CallOnFracture(Collider instigator, GameObject fracturedObject, Vector3 point)

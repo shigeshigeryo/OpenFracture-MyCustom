@@ -162,7 +162,7 @@ public class Fracture : MonoBehaviour
                         {
                             if (callbackOptions.onCompleted != null)
                             {
-                                callbackOptions.onCompleted.Invoke();
+                                callbackOptions.CallOnCompleted(this.fragmentRoot);
                             }
                         }
                     }
@@ -187,7 +187,7 @@ public class Fracture : MonoBehaviour
                 {
                     if (callbackOptions.onCompleted != null)
                     {
-                        callbackOptions.onCompleted.Invoke();
+                        callbackOptions.CallOnCompleted(this.fragmentRoot);
                     }
                 }
             }
