@@ -71,7 +71,7 @@ public class UnfreezeFragment : MonoBehaviour
 
         if (this.onFractureCompleted != null)
         {
-            this.onFractureCompleted.Invoke(this.transform.parent);
+            this.onFractureCompleted.Invoke(this.transform.parent.gameObject);
         }
     }
 
