@@ -108,7 +108,7 @@ public class Fracture : MonoBehaviour
     /// Compute the fracture and create the fragments
     /// </summary>
     /// <returns></returns>
-    private void ComputeFracture()
+    public void ComputeFracture()
     {
         var mesh = this.GetComponent<MeshFilter>().sharedMesh;
 
