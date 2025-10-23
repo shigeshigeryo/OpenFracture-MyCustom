@@ -104,18 +104,6 @@ public class Fracture : MonoBehaviour
         }
     }
 
-    void Update()
-    {
-        if (triggerOptions.triggerType == TriggerType.Keyboard)
-        {
-            if (Input.GetKeyDown(triggerOptions.triggerKey))
-            {
-                callbackOptions.CallOnFracture(null, gameObject, transform.position);
-                this.ComputeFracture();
-            }
-        }
-    }
-
     /// <summary>
     /// Compute the fracture and create the fragments
     /// </summary>
